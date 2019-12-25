@@ -1,5 +1,5 @@
 # QuickAppsServer (QAS)
-### Install a few widely used web server apps
+### Install a few widely used web server apps and configure the system
 This script will perform a few checks (root, OS).
 
 It will work for Ubuntu (16.04 +) & Debian (8 +). Il will NOT work for other OS.
