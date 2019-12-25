@@ -1,5 +1,5 @@
 # QuickAppsServer (QAS)
-### Install a few widely used web server apps and configure the system
+#### Install a few widely used web server apps and configure the system
 This script will perform a few checks (root, OS).
 
 It will work for Ubuntu (16.04 +) & Debian (8 +). Il will NOT work for other OS.
@@ -17,7 +17,7 @@ Answer YES or NO to each 7 questions.
 
 You can not install app separatly at the moment...
 
-### HOW TO INSTALL
+#### HOW TO INSTALL
 1. You need FIRST to reconfigure DASH: 
 ``dpkg-reconfigure dash``
 then answer NO
@@ -28,6 +28,6 @@ then answer NO
 4. Run the file:
 ``sh install.sh``
 
-### TODO
+#### TODO
 1. Propose more apps...
 2. Install app one by one and chose what to install...
