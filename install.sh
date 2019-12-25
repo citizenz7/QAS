@@ -133,7 +133,7 @@ if [[ $user =~ ^(y|Y|yes|YES)$ ]]; then
 	egrep "^$username" /etc/passwd >/dev/null
 
 	if [ $? -eq 0 ]; then
-		echo "$username exists!"
+		echo "$username already exists! Exiting!"
 		exit 1
 	else
 		# check if passwords match and if not ask again
