@@ -1,5 +1,5 @@
 # QuickAppsServer (QAS)
-#### INSTALL WEB SERVER APPS
+#### WHAT IS IT?
 - This script will perform a few checks (root, OS).
 - It will work for Ubuntu (16.04 +) & Debian (8 +). Il will NOT work for other OS.
 - It will install a few widely used web server apps and configure the system (hosts, hostname, system user with sudo rights, ...)
