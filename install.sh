@@ -84,23 +84,22 @@ fi
 apt update
 apt upgrade -y
 apt autoremove
+
+#install important apps... if not yet installed
 apt install sudo dnsutils
 
 #install basic apps ?
-echo -n 'Do you want to install basic apps (vim, mc, screen, htop, git, curl, ntp, ntpdate)? (y|n)'
+echo -n 'Do you want to install basic apps (mc, screen, htop, vim, curl, git, ntp, ntpdate)? (y|n)'
 read apps
 if [[ $apps =~ ^(y|Y|yes|YES)$ ]]; then
 	apt install -y mc screen htop vim-nox curl git ntp ntpdate
 fi
 
 #install web apps ?
-echo -n 'Do you want to install web apps (nginx, mariadb-server, php7.2-fpm, openssl, memcached)? (y|n)'
+echo -n 'Do you want to install web apps (nginx, mariadb-server, php-fpm, openssl, memcached)? (y|n)'
 read appsweb
 if [[ $appsweb =~ ^(y|Y|yes|YES)$ ]]; then
-	apt install -y nginx mariadb-server openssl php-fpm php-gd php-mysql memcached php-memcache
-	# Re-start services
-	service php7.2-fpm reload
-	service nginx restart
+	apt install -y nginx mariadb-server openssl php-fpm php-mysql memcached php-memcache
 fi
 
 #install security apps ?
