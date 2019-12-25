@@ -89,7 +89,7 @@ apt autoremove
 echo -n 'Do you want to install basic apps (vim, mc, screen, htop, git, curl, ntp, ntpdate, sudo)? (y|n)'
 read apps
 if [[ $apps =~ ^(y|Y|yes|YES)$ ]]; then
-	apt install -y mc screen htop vim-nox curl git ntp ntpdate sudo 
+	apt install -y mc screen htop vim-nox curl git ntp ntpdate sudo dnsutils 
 fi
 
 #install web apps ?
