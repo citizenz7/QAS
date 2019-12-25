@@ -57,13 +57,13 @@ fi
 echo "$(lsb_release -a)"
 
 if [[ ! $DISTRO =~ ^(Ubuntu|Debian)$ ]]; then
-  echo "$DISTRO: ${alert} /!\ It looks like you are running $DISTRO, which is not supported by QuickAppsServer /!\ ${normal} "
+  echo "$DISTRO: ${alert} It looks like you are running $DISTRO, which is not supported by QuickAppsServer :/ ${normal} "
   echo "Exiting..."
   exit 1
 fi
 echo
 if [[ ! $CODENAME =~ ^(xenial|eoan|disco|bionic|cosmic|artful|zesty|yakkety|buster|stretch|jessie)$ ]]; then
-  echo "$CODENAME: ${alert} /!\ It looks like you are running $DISTRO $RELEASE '$CODENAME', which is not supported by QuickAppsServer /!\ ${normal} "
+  echo "$CODENAME: ${alert} It looks like you are running $DISTRO $RELEASE '$CODENAME', which is not supported by QuickAppsServer :/ ${normal} "
   echo "Exiting..."
   exit 1
 fi
@@ -165,7 +165,8 @@ echo -n 'Do you want to configure /etc/hosts? (y|n)'
 read hosts
 if [[ $hosts =~ ^(y|Y|yes|YES)$ ]]; then
 	read -p "Enter hostname FQDN (ex: serv1.example.com): " fqdn
-	IP=$(dig +short myip.opendns.com @resolver1.opendns.com)
+	echo "127.0.0.1 localhost.localdomain localhost">/etc/hosts
+	IP=$(dig @ns1-1.akamaitech.net ANY whoami.akamai.net +short)
 	sed -i "/$fqdn/ s/.*/$IP\t$fqdn/g" /etc/hosts
 fi
 
@@ -174,7 +175,8 @@ echo -n 'Do you want to configure /etc/hostname? (y|n)'
 read hostname
 if [[ $hostname =~ ^(y|Y|yes|YES)$ ]]; then
 	read -p "Enter hostname FQDN (ex: serv1.example.com): " fqdn
-	hostnamectl set-hostname $fqdn
+	#hostnamectl set-hostname $fqdn
+	echo "${fqdn}">/etc/hostname
 fi
 
 #then reboot if ok
