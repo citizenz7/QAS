@@ -2,7 +2,7 @@
 ### Script to install a few widely used web server apps
 This script will perform a few checks (root, OS).
 
-- It will work for Ubuntu (16.04 +) & Debian (8 +). Il will NOT work for other OS.
+It will work for Ubuntu (16.04 +) & Debian (8 +). Il will NOT work for other OS.
 
 This script will:
 1. Install basic apps (vim, mc, screen, htop, git, curl, ntp, ntpdate, sudo)
