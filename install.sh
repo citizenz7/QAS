@@ -97,10 +97,7 @@ fi
 echo -n 'Do you want to install web apps (nginx, mariadb-server, php7.2-fpm, openssl, memcached)? (y|n)'
 read appsweb
 if [[ $appsweb =~ ^(y|Y|yes|YES)$ ]]; then
-	apt install -y nginx mariadb-server openssl 
-	php7.2-fpm php7.2 php7.2-common php7.2-gd php7.2-mysql php7.2-imap php7.2-cli php7.2-cgi php-pear mcrypt 
-	imagemagick libruby php7.2-curl php7.2-intl php7.2-pspell php7.2-recode php7.2-sqlite3 php7.2-tidy 
-	php7.2-xmlrpc php7.2-xsl memcached php-memcache php-imagick php-gettext php7.2-zip php7.2-mbstring
+	apt install -y nginx mariadb-server openssl php-fpm php-gd php-mysql memcached php-memcache
 	# Re-start services
 	service php7.2-fpm reload
 	service nginx restart
@@ -117,9 +114,8 @@ fi
 echo -n 'Do you want to install HTTPS certificat Letsencrypt (cerbot)? (y|n)'
 read letsencrypt
 if [[ $letsencrypt =~ ^(y|Y|yes|YES)$ ]]; then
-	add-apt-repository -y ppa:certbot/certbot
-	apt update
-	apt install -y python-certbot-nginx
+	apt install -y python3-acme python3-certbot python3-mock python3-openssl python3-pkg-resources python3-pyparsing python3-zope.interface
+	apt install -y python3-certbot-nginx
 fi
 
 #add a system user
