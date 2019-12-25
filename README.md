@@ -17,6 +17,17 @@ Answer YES or NO to each 7 questions.
 
 You can not install app separatly at the moment...
 
+### HOW TO INSTALL
+1. You need FIRST to reconfigure DASH: 
+``dpkg-reconfigure dash``
+then answer NO
+2. Download the script from Github:
+``wget``
+3. Make this file executable:
+``chmod +x install.sh``
+4. Run the file:
+``sh install.sh``
+
 #### TODO
 1. Propose more apps...
 2. Install app one by one and chose what to install...
