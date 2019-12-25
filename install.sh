@@ -80,6 +80,7 @@ fi
 echo "The script will now update & upgrade the system and then will install a few important apps."
 echo "Some questions will be asked after this."
 echo "Please be patient."
+echo
 
 #################################################################################
 # Make a pause before installing...
