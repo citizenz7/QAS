@@ -155,6 +155,7 @@ if [[ $user =~ ^(y|Y|yes|YES)$ ]]; then
 	read sudo
 	if [[ $sudo =~ ^(y|Y|yes|YES)$ ]]; then
 		adduser $username sudo
+	fi
 fi
 
 #setting /etc/hosts
