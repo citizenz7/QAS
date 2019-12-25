@@ -22,7 +22,7 @@ You can not install app separatly at the moment...
 ``dpkg-reconfigure dash``
 then answer NO
 2. Download the script from Github:
-``wget``
+``wget https://raw.githubusercontent.com/citizenz7/QAS/master/install.sh``
 3. Make this file executable:
 ``chmod +x install.sh``
 4. Run the file:
