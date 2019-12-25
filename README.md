@@ -12,3 +12,11 @@ This script will:
 5. Add and configure a system user (+sudo settings)
 6. Configure /etc/hosts and /etc/hostname
 7. Reboot
+
+Answer YES or NO to each 7 questions.
+
+You can not install app separatly at the moment...
+
+#### TODO
+1. Propose more apps...
+2. Install app one by one and chose what to install...
