@@ -58,7 +58,7 @@ echo "$(lsb_release -a)"
 
 if [[ ! $DISTRO =~ ^(Ubuntu|Debian)$ ]]; then
   echo "$DISTRO: ${alert} /!\ It looks like you are running $DISTRO, which is not supported by QuickAppsServer /!\ ${normal} "
-  echo 'Exiting...'
+  echo "Exiting..."
   exit 1
 fi
 echo
