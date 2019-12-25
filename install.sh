@@ -64,7 +64,7 @@ fi
 echo
 if [[ ! $CODENAME =~ ^(xenial|eoan|disco|bionic|cosmic|artful|zesty|yakkety|buster|stretch|jessie)$ ]]; then
   echo "$CODENAME: ${alert} /!\ It looks like you are running $DISTRO $RELEASE '$CODENAME', which is not supported by QuickAppsServer /!\ ${normal} "
-  echo 'Exiting...'
+  echo "Exiting..."
   exit 1
 fi
 
