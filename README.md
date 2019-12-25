@@ -6,7 +6,7 @@
 - It will install a few widely used web server apps and configure the system (hosts, hostname, system user with sudo rights, ...)
 
 This script will:
-1. Install basic apps (vim, mc, screen, htop, git, curl, ntp, ntpdate, sudo)
+1. Install basic apps (vim, mc, screen, htop, git, curl, ntp, ntpdate, sudo, dnsutils)
 2. Install web apps (Nginx, PHP 7.2-fpm, Mariadb, openssl, memcached)
 3. Install basic security apps (ufw firewall, fail2ban)
 4. Install Letsencrypt certbot (from PPA)
