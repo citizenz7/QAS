@@ -78,9 +78,13 @@ if [ "$EUID" -ne 0 ]; then
 fi
 
 #################################################################################
-# Print infos about system then & make a pause before installing...
+# Print infos about system then make a pause before installing...
 #################################################################################
 read -n 1 -s -r -p "Press any key to continue"
+
+echo "The script will now update & upgrade the system and then will install a few important apps."
+echo "Some questions will be asked after this."
+echo "Please be patient."
 
 #################################################################################
 # update, upgrade, install, configure,... reboot
