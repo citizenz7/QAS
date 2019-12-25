@@ -84,12 +84,13 @@ fi
 apt update
 apt upgrade -y
 apt autoremove
+apt install sudo dnsutils
 
 #install basic apps ?
-echo -n 'Do you want to install basic apps (vim, mc, screen, htop, git, curl, ntp, ntpdate, sudo, dnsutils)? (y|n)'
+echo -n 'Do you want to install basic apps (vim, mc, screen, htop, git, curl, ntp, ntpdate)? (y|n)'
 read apps
 if [[ $apps =~ ^(y|Y|yes|YES)$ ]]; then
-	apt install -y mc screen htop vim-nox curl git ntp ntpdate sudo dnsutils 
+	apt install -y mc screen htop vim-nox curl git ntp ntpdate
 fi
 
 #install web apps ?
