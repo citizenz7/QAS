@@ -78,8 +78,7 @@ if [ "$EUID" -ne 0 ]; then
 fi
 
 #################################################################################
-# Print infos about system then
-# make a pause before installing...
+# Print infos about system then & make a pause before installing...
 #################################################################################
 read -n 1 -s -r -p "Press any key to continue"
 
