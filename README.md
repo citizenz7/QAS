@@ -15,7 +15,7 @@ This script will:
 7. Configure /etc/hostname
 8. Reboot
 
-Answer YES or NO.
+Answer YES or NO to each question.
 
 ##### You can not install app separatly at the moment.
 
