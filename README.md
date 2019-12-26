@@ -11,10 +11,11 @@ This script will:
 3. Install basic security apps (ufw firewall, fail2ban)
 4. Install Letsencrypt certbot
 5. Add and configure a system user (+ sudo settings)
-6. Configure /etc/hosts and /etc/hostname
-7. Reboot
+6. Configure /etc/hosts
+7. Configure /etc/hostname
+8. Reboot
 
-Answer YES or NO to each 7 questions.
+Answer YES or NO.
 
 ##### You can not install app separatly at the moment.
 
