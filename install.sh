@@ -91,25 +91,26 @@ read -n 1 -s -r -p "Press any key to continue"
 # update, upgrade, install, configure,... reboot
 #################################################################################
 #update & upgrade system
-apt update
-apt upgrade -y
-apt autoremove
+apt-get update
+apt-get upgrade -y
+apt-get autoremove
 
 #install important apps... if not yet installed
-apt install sudo dnsutils
+#same for Debian & Ubuntu
+apt-get install sudo dnsutils
 
 #install basic apps ?
-echo -n 'Do you want to install basic apps (mc, screen, htop, vim, curl, git, ntp, ntpdate)? (y|n)'
+echo -n 'Do you want to install basic apps (mc, screen, htop, vim, curl, git, ntp, ntpdate, dos2unix, zip, unzip)? (y|n)'
 read apps
 if [[ $apps =~ ^(y|Y|yes|YES)$ ]]; then
-	apt install -y mc screen htop vim-nox curl git ntp ntpdate
+	apt-get install -y mc screen htop vim-nox curl git ntp ntpdate dos2unix zip unzip
 fi
 
 #install web apps ?
-echo -n 'Do you want to install web apps (nginx, mariadb-server, php-fpm, openssl, memcached)? (y|n)'
+echo -n 'Do you want to install web apps (nginx, mariadb-server, php-fpm, php-mysql, openssl, memcached, php-memcache)? (y|n)'
 read appsweb
 if [[ $appsweb =~ ^(y|Y|yes|YES)$ ]]; then
-	apt install -y nginx mariadb-server openssl php-fpm php-mysql memcached php-memcache
+	apt install -y nginx mariadb-server php-fpm php-mysql openssl memcached php-memcache
 fi
 
 #install security apps ?
