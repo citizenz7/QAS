@@ -170,9 +170,8 @@ echo -n 'Do you want to configure /etc/hosts? (y|n)'
 read hosts
 if [[ $hosts =~ ^(y|Y|yes|YES)$ ]]; then
 	read -p "Enter hostname FQDN (ex: serv1.example.com): " fqdn
-	echo "127.0.0.1 localhost.localdomain localhost">/etc/hosts
 	IP=$(dig @ns1-1.akamaitech.net ANY whoami.akamai.net +short)
-	sed -i "/$fqdn/ s/.*/$IP\t$fqdn/g" /etc/hosts
+	echo -e "127.0.0.1 localhost.localdomain localhost\n\n$IP ${fqdn}">/etc/hosts
 fi
 
 #setting /etc/hostname
