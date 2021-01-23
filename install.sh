@@ -91,19 +91,19 @@ read -n 1 -s -r -p "Press any key to continue"
 # update, upgrade, install, configure,... reboot
 #################################################################################
 #update & upgrade system
-apt-get update
-apt-get upgrade -y
-apt-get autoremove
+apt update
+apt upgrade -y
+apt autoremove -y
 
 #install important apps... if not yet installed
 #same for Debian & Ubuntu
-apt-get install sudo dnsutils
+apt install -y sudo dnsutils
 
 #install basic apps ?
 echo -n 'Do you want to install basic apps (mc, screen, htop, vim, curl, git, ntp, ntpdate, dos2unix, zip, unzip)? (y|n)'
 read apps
 if [[ $apps =~ ^(y|Y|yes|YES)$ ]]; then
-	apt-get install -y mc screen htop vim-nox curl git ntp ntpdate dos2unix zip unzip
+	apt install -y mc screen htop vim-nox curl git ntp ntpdate dos2unix zip unzip
 fi
 
 #install web apps ?
