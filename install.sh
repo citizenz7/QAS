@@ -100,10 +100,10 @@ apt autoremove -y
 apt install -y sudo dnsutils
 
 #install basic apps ?
-echo -n 'Do you want to install basic apps (mc, screen, htop, vim, curl, git, ntp, ntpdate, dos2unix, zip, unzip)? (y|n)'
+echo -n 'Do you want to install basic apps (mc, screen, htop, net-tools, vim, curl, git, ntp, ntpdate, dos2unix, zip, unzip)? (y|n)'
 read apps
 if [[ $apps =~ ^(y|Y|yes|YES)$ ]]; then
-	apt install -y mc screen htop vim-nox curl git ntp ntpdate dos2unix zip unzip
+	apt install -y mc screen htop vim-nox curl git ntp ntpdate net-tools dos2unix zip unzip
 fi
 
 #install web apps ?
